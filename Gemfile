@@ -51,4 +51,6 @@ end
 gem 'bootstrap-sass'
 
 #=================0825
-gem 'rails_12factor', group: :producution
+gem 'rails_12factor'
+
+gem 'bcrypt-ruby', '~> 3.0.0'
