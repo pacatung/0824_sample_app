@@ -50,3 +50,5 @@ end
 #=================0824
 gem 'bootstrap-sass'
 
+#=================0825
+gem 'rails_12factor', group: :producution
