@@ -3,6 +3,14 @@
 <table>
   <thead>
     <tr>
+
+    <div class="container">
+    <%= form_tag users_path, method: :get do %>
+        <%= text_field_tag :search %>
+        <%= submit_tag "Search User" %>
+    <% end %>
+  <ul class="users">
+
       <th>Name</th>
       <th>Email</th>
       <th>Phone</th>

@@ -54,3 +54,34 @@ gem 'bootstrap-sass'
 gem 'rails_12factor'
 
 gem 'bcrypt-ruby', '~> 3.0.0'
+
+#=================0901
+# Break large result sets into multiple pages
+gem 'will_paginate'
+gem 'faker', group: :development
+
+# Use Sunspot+Solr for search
+gem 'sunspot_rails'
+gem 'sunspot_solr', group: :development
+
+# Display full error context
+gem 'better_errors', group: :development
+gem 'binding_of_caller', group: :development
+
+# RSpec testing framework
+gem 'rspec-rails', group: [ :development, :test ]
+
+# Testing for Humans   
+gem 'capybara', group: :test
+
+# Testing Javascript execution
+gem 'selenium-webdriver', group: :test
+
+# Create fixtures for testing
+gem 'factory_girl_rails', '~> 4.0', group: :test
+
+# Launch pages during testing
+gem 'launchy'
+
+# Clear fixtures from database between tests
+gem 'database_cleaner', '1.0.0.RC1'

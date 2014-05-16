@@ -1,7 +1,24 @@
 FirstApp::Application.routes.draw do
-  get "root/home"
-  resources :users
+#  get "posts/new"
+#  get "posts/create"
+#  get "sessions/new"
+#  get "sessions/create"
+#  get "sessions/destroy"
 
+#-----------0901
+#resources [:new, :create, :destroy, :]
+#-----------0831
+resources :posts
+resources :users do
+  get 'followers', on: :member
+  post "follow", on: :member
+  delete "unfollow", on: :member
+end
+#-----------0825
+resource :sessions, only: [ :new, :create, :destroy ]
+  get "root/home"
+  
+  get '/sandbox', to: 'root#sandbox' if Rails.env.development?
   root to: 'root#home'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -84,7 +84,7 @@ body {
 }
 
 section {
-  overflow: auto;
+  /*overflow: auto;*/
 }
 
 textarea {
@@ -189,3 +189,47 @@ footer ul li {
   @extend .error;
 }
 
+/*---------0831------*/
+/* posts */
+
+.posts {
+  list-style: none;
+  margin: 10px 0 0 0;
+  
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.content {
+  display: block;
+}
+.timestamp {
+  color: $grayLight;
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+/* posts */
+.new_post {
+    textarea {
+        width: 85%;
+    }
+    input[type=submit] {
+        margin-bottom: 10px;
+    }
+}
+
+/* users */
+
+.users {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    min-height: 52px;
+  }
+}

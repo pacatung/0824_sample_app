@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<!-- 0824 New header -->
+<!-- 0824 New header 
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
@@ -16,8 +16,27 @@
 </div>
 </div>
 </header>
+-->
 
-
+<!--0825 New Header  -->
+<header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-inner">
+        <div class="container">
+            <%= link_to "FirstApp", "#", id: "logo" %>
+            <nav>
+              <ul class="nav pull-right">
+              <% if signed_in? %>
+                <li><%= link_to "Hello #{current_user.name}", current_user %></li>
+                <li><%= link_to "Log out", sessions_path, method: "delete" %></li>
+              <% else %>
+                <li><%= link_to "Log In", new_sessions_path %></li>
+                <li><%= link_to "Register", new_user_path %></li>
+              <% end %>
+              </ul>
+            </nav>
+        </div>
+    </div>
+</header>
 
 <!-- 0824 Content wrapped in container -->
 <div class="container">
