@@ -11,7 +11,7 @@ searchable do
     #     [ user.name, user.email ]
     # end
     time :created_at
-  end
+#  end
 
   def self.from_followed_users(user)
 		where("user_id IN (SELECT to_id FROM followings WHERE from_id = :user_id) OR user_id = :user_id", user_id: user.id)
